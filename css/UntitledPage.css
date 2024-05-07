@@ -37,6 +37,8 @@
 .untitled-page .flex_col {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   flex-direction: column;
   gap: 158px 0px;
   margin: 51px auto 125px;
@@ -44,10 +46,18 @@
 }
 .untitled-page .flex_row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 0px 10px;
   margin: 0px 0px 0px 16px;
   width: 80.91%;
+}
+/* 在較小視口下垂直排列卡片 */
+@media (min-width: 767px) {
+  .untitled-page .flex_row {
+    flex-direction: column; /* 垂直堆疊排列 */
+    align-items: center; /* 水平居中對齊 */
+  }
 }
 .untitled-page .content_box3 {
   position: relative;
@@ -553,9 +563,13 @@
 }
 .untitled-page .subtitle {
   margin: 20px 0px 20px 32px;
-  width: 194px;
+  width: 90%;
   font: 400 20px/1.5 "Inter", Helvetica, Arial, serif;
   color: #8987a1;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  outline: none;
 }
 .untitled-page .highlight41 {
   margin: 16px 0px 0px;
@@ -565,9 +579,13 @@
 }
 .untitled-page .subtitle1 {
   margin: 20px 0px 20px 32px;
-  width: 86px;
+  width:90%;
   font: 400 20px/1.5 "Inter", Helvetica, Arial, serif;
   color: #8987a1;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  outline: none;
 }
 .untitled-page .content_box11 {
   display: flex;
@@ -579,10 +597,18 @@
   outline-offset: -1px;
 }
 .untitled-page .subtitle2 {
-  margin: 20px 0px 172px 32px;
-  width: 208px;
+  margin: 0; /* 重置外邊距 */
+  padding: 32px; /* 設置內邊距 */
+  width: 100%; /* 讓寬度佔滿 .content_box11 */
+  height: 100%; /* 讓高度佔滿 .content_box11 */
   font: 400 20px/1.5 "Inter", Helvetica, Arial, serif;
   color: #8987a1;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  overflow: auto;
 }
 .untitled-page .content_box10 {
   display: flex;
