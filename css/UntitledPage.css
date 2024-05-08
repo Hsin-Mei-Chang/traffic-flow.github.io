@@ -52,13 +52,7 @@
   margin: 0px 0px 0px 16px;
   width: 80.91%;
 }
-/* 在較小視口下垂直排列卡片 */
-@media (min-width: 767px) {
-  .untitled-page .flex_row {
-    flex-direction: column; /* 垂直堆疊排列 */
-    align-items: center; /* 水平居中對齊 */
-  }
-}
+
 .untitled-page .content_box3 {
   position: relative;
   display: flex;
